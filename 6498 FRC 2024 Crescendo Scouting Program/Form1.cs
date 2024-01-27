@@ -54,7 +54,7 @@ namespace _6498_FRC_2024_Crescendo_Scouting_Program
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Top -= 50;
+            this.Top -= 75;
             cmbInfoPosition.SelectedIndex = 0;
             cmbStageParkClimb.SelectedIndex = 0;
         }
