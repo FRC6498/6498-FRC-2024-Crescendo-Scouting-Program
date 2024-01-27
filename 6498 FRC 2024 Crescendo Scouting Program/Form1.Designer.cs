@@ -54,27 +54,28 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtTeleAmp = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.txtTeleAmpSpeaker = new System.Windows.Forms.TextBox();
+            this.txtTeleUnampSpeaker = new System.Windows.Forms.TextBox();
+            this.btnAddTeleAmpSpeaker = new System.Windows.Forms.Button();
+            this.btnAddTeleAmp = new System.Windows.Forms.Button();
+            this.btnAddTeleUnampSpeaker = new System.Windows.Forms.Button();
+            this.btnSubTeleAmpSpeaker = new System.Windows.Forms.Button();
+            this.btnSubTeleAmp = new System.Windows.Forms.Button();
+            this.btnSubTeleUnampSpeaker = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnNotes = new System.Windows.Forms.Button();
+            this.txtNotes = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnStageTrap = new System.Windows.Forms.Button();
+            this.cmbStageParkClimb = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlAuto.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -95,8 +96,8 @@
             // 
             this.txtInfoTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.txtInfoTeam.Location = new System.Drawing.Point(88, 86);
-            this.txtInfoTeam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtInfoTeam.MaxLength = 4;
+            this.txtInfoTeam.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInfoTeam.MaxLength = 8;
             this.txtInfoTeam.Name = "txtInfoTeam";
             this.txtInfoTeam.Size = new System.Drawing.Size(113, 32);
             this.txtInfoTeam.TabIndex = 1;
@@ -119,7 +120,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(207, 561);
             this.panel1.TabIndex = 2;
@@ -135,7 +136,7 @@
             // 
             this.btnShowFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowFolder.Location = new System.Drawing.Point(14, 487);
-            this.btnShowFolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowFolder.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowFolder.Name = "btnShowFolder";
             this.btnShowFolder.Size = new System.Drawing.Size(171, 58);
             this.btnShowFolder.TabIndex = 4;
@@ -146,7 +147,7 @@
             // 
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.Location = new System.Drawing.Point(14, 423);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(171, 58);
             this.btnOpen.TabIndex = 4;
@@ -157,7 +158,7 @@
             // 
             this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.Location = new System.Drawing.Point(13, 360);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(2);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(171, 58);
             this.btnNew.TabIndex = 4;
@@ -168,7 +169,7 @@
             // 
             this.txtInfoScouterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.txtInfoScouterName.Location = new System.Drawing.Point(14, 35);
-            this.txtInfoScouterName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInfoScouterName.Margin = new System.Windows.Forms.Padding(2);
             this.txtInfoScouterName.MaxLength = 40;
             this.txtInfoScouterName.Name = "txtInfoScouterName";
             this.txtInfoScouterName.Size = new System.Drawing.Size(187, 32);
@@ -199,7 +200,7 @@
             "Red 2",
             "Red 3"});
             this.cmbInfoPosition.Location = new System.Drawing.Point(14, 161);
-            this.cmbInfoPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbInfoPosition.Margin = new System.Windows.Forms.Padding(2);
             this.cmbInfoPosition.Name = "cmbInfoPosition";
             this.cmbInfoPosition.Size = new System.Drawing.Size(187, 30);
             this.cmbInfoPosition.TabIndex = 67;
@@ -208,7 +209,7 @@
             // 
             this.txtInfoMatchNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.txtInfoMatchNumber.Location = new System.Drawing.Point(110, 229);
-            this.txtInfoMatchNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInfoMatchNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtInfoMatchNumber.MaxLength = 3;
             this.txtInfoMatchNumber.Name = "txtInfoMatchNumber";
             this.txtInfoMatchNumber.Size = new System.Drawing.Size(90, 32);
@@ -252,7 +253,7 @@
             this.pnlAuto.Controls.Add(this.label8);
             this.pnlAuto.Controls.Add(this.label7);
             this.pnlAuto.Location = new System.Drawing.Point(206, 0);
-            this.pnlAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAuto.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAuto.Name = "pnlAuto";
             this.pnlAuto.Size = new System.Drawing.Size(483, 380);
             this.pnlAuto.TabIndex = 3;
@@ -261,7 +262,7 @@
             // 
             this.txtAutoAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutoAmp.Location = new System.Drawing.Point(278, 317);
-            this.txtAutoAmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAutoAmp.Margin = new System.Windows.Forms.Padding(2);
             this.txtAutoAmp.MaxLength = 3;
             this.txtAutoAmp.Name = "txtAutoAmp";
             this.txtAutoAmp.ReadOnly = true;
@@ -273,7 +274,7 @@
             // 
             this.txtAutoSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutoSpeaker.Location = new System.Drawing.Point(278, 209);
-            this.txtAutoSpeaker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAutoSpeaker.Margin = new System.Windows.Forms.Padding(2);
             this.txtAutoSpeaker.MaxLength = 3;
             this.txtAutoSpeaker.Name = "txtAutoSpeaker";
             this.txtAutoSpeaker.ReadOnly = true;
@@ -327,7 +328,7 @@
             this.btnAutoTaxiCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAutoTaxiCheck.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAutoTaxiCheck.Location = new System.Drawing.Point(286, 100);
-            this.btnAutoTaxiCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAutoTaxiCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnAutoTaxiCheck.Name = "btnAutoTaxiCheck";
             this.btnAutoTaxiCheck.Size = new System.Drawing.Size(75, 70);
             this.btnAutoTaxiCheck.TabIndex = 70;
@@ -383,121 +384,136 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtTeleAmp);
             this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.txtTeleAmpSpeaker);
+            this.panel2.Controls.Add(this.txtTeleUnampSpeaker);
+            this.panel2.Controls.Add(this.btnAddTeleAmpSpeaker);
+            this.panel2.Controls.Add(this.btnAddTeleAmp);
+            this.panel2.Controls.Add(this.btnAddTeleUnampSpeaker);
+            this.panel2.Controls.Add(this.btnSubTeleAmpSpeaker);
+            this.panel2.Controls.Add(this.btnSubTeleAmp);
+            this.panel2.Controls.Add(this.btnSubTeleUnampSpeaker);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Location = new System.Drawing.Point(688, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(543, 380);
             this.panel2.TabIndex = 3;
             // 
-            // textBox1
+            // txtTeleAmp
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(353, 317);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.MaxLength = 3;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(90, 49);
-            this.textBox1.TabIndex = 72;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTeleAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTeleAmp.Location = new System.Drawing.Point(353, 317);
+            this.txtTeleAmp.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTeleAmp.MaxLength = 3;
+            this.txtTeleAmp.Name = "txtTeleAmp";
+            this.txtTeleAmp.ReadOnly = true;
+            this.txtTeleAmp.Size = new System.Drawing.Size(90, 49);
+            this.txtTeleAmp.TabIndex = 72;
+            this.txtTeleAmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // btnClose
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(353, 211);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.MaxLength = 3;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(90, 49);
-            this.textBox3.TabIndex = 72;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnClose.BackColor = System.Drawing.Color.Red;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.Location = new System.Drawing.Point(493, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(46, 46);
+            this.btnClose.TabIndex = 76;
+            this.btnClose.Tag = "";
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // textBox2
+            // txtTeleAmpSpeaker
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(353, 103);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.MaxLength = 3;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(90, 49);
-            this.textBox2.TabIndex = 72;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTeleAmpSpeaker.Location = new System.Drawing.Point(353, 211);
+            this.txtTeleAmpSpeaker.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTeleAmpSpeaker.MaxLength = 3;
+            this.txtTeleAmpSpeaker.Name = "txtTeleAmpSpeaker";
+            this.txtTeleAmpSpeaker.ReadOnly = true;
+            this.txtTeleAmpSpeaker.Size = new System.Drawing.Size(90, 49);
+            this.txtTeleAmpSpeaker.TabIndex = 72;
+            this.txtTeleAmpSpeaker.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button6
+            // txtTeleUnampSpeaker
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(451, 206);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 60);
-            this.button6.TabIndex = 71;
-            this.button6.Text = "+";
-            this.button6.UseVisualStyleBackColor = true;
+            this.txtTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTeleUnampSpeaker.Location = new System.Drawing.Point(353, 103);
+            this.txtTeleUnampSpeaker.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTeleUnampSpeaker.MaxLength = 3;
+            this.txtTeleUnampSpeaker.Name = "txtTeleUnampSpeaker";
+            this.txtTeleUnampSpeaker.ReadOnly = true;
+            this.txtTeleUnampSpeaker.Size = new System.Drawing.Size(90, 49);
+            this.txtTeleUnampSpeaker.TabIndex = 72;
+            this.txtTeleUnampSpeaker.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // btnAddTeleAmpSpeaker
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(451, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 60);
-            this.button1.TabIndex = 71;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleAmpSpeaker.Location = new System.Drawing.Point(451, 206);
+            this.btnAddTeleAmpSpeaker.Name = "btnAddTeleAmpSpeaker";
+            this.btnAddTeleAmpSpeaker.Size = new System.Drawing.Size(60, 60);
+            this.btnAddTeleAmpSpeaker.TabIndex = 71;
+            this.btnAddTeleAmpSpeaker.Text = "+";
+            this.btnAddTeleAmpSpeaker.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAddTeleAmp
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(451, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 60);
-            this.button2.TabIndex = 71;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddTeleAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleAmp.Location = new System.Drawing.Point(451, 311);
+            this.btnAddTeleAmp.Name = "btnAddTeleAmp";
+            this.btnAddTeleAmp.Size = new System.Drawing.Size(60, 60);
+            this.btnAddTeleAmp.TabIndex = 71;
+            this.btnAddTeleAmp.Text = "+";
+            this.btnAddTeleAmp.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnAddTeleUnampSpeaker
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(284, 206);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 60);
-            this.button5.TabIndex = 71;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnAddTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleUnampSpeaker.Location = new System.Drawing.Point(451, 98);
+            this.btnAddTeleUnampSpeaker.Name = "btnAddTeleUnampSpeaker";
+            this.btnAddTeleUnampSpeaker.Size = new System.Drawing.Size(60, 60);
+            this.btnAddTeleUnampSpeaker.TabIndex = 71;
+            this.btnAddTeleUnampSpeaker.Text = "+";
+            this.btnAddTeleUnampSpeaker.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSubTeleAmpSpeaker
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(284, 311);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 60);
-            this.button3.TabIndex = 71;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSubTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubTeleAmpSpeaker.Location = new System.Drawing.Point(284, 206);
+            this.btnSubTeleAmpSpeaker.Name = "btnSubTeleAmpSpeaker";
+            this.btnSubTeleAmpSpeaker.Size = new System.Drawing.Size(60, 60);
+            this.btnSubTeleAmpSpeaker.TabIndex = 71;
+            this.btnSubTeleAmpSpeaker.Text = "-";
+            this.btnSubTeleAmpSpeaker.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSubTeleAmp
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(284, 98);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 60);
-            this.button4.TabIndex = 71;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSubTeleAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubTeleAmp.Location = new System.Drawing.Point(284, 311);
+            this.btnSubTeleAmp.Name = "btnSubTeleAmp";
+            this.btnSubTeleAmp.Size = new System.Drawing.Size(60, 60);
+            this.btnSubTeleAmp.TabIndex = 71;
+            this.btnSubTeleAmp.Text = "-";
+            this.btnSubTeleAmp.UseVisualStyleBackColor = true;
+            // 
+            // btnSubTeleUnampSpeaker
+            // 
+            this.btnSubTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubTeleUnampSpeaker.Location = new System.Drawing.Point(284, 98);
+            this.btnSubTeleUnampSpeaker.Name = "btnSubTeleUnampSpeaker";
+            this.btnSubTeleUnampSpeaker.Size = new System.Drawing.Size(60, 60);
+            this.btnSubTeleUnampSpeaker.TabIndex = 71;
+            this.btnSubTeleUnampSpeaker.Text = "-";
+            this.btnSubTeleUnampSpeaker.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -543,27 +559,27 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Amplified Notes\r\nscored in Speaker:";
             // 
-            // button7
+            // btnNotes
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1051, 407);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(137, 120);
-            this.button7.TabIndex = 4;
-            this.button7.Tag = "hidden";
-            this.button7.Text = "Show Notes";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotes.Location = new System.Drawing.Point(1063, 476);
+            this.btnNotes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNotes.Name = "btnNotes";
+            this.btnNotes.Size = new System.Drawing.Size(157, 70);
+            this.btnNotes.TabIndex = 4;
+            this.btnNotes.Tag = "hidden";
+            this.btnNotes.Text = "Show Notes";
+            this.btnNotes.UseVisualStyleBackColor = true;
+            this.btnNotes.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox4
+            // txtNotes
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(12, 566);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(1207, 149);
-            this.textBox4.TabIndex = 71;
+            this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotes.Location = new System.Drawing.Point(12, 566);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(1207, 149);
+            this.txtNotes.TabIndex = 71;
             // 
             // label13
             // 
@@ -576,36 +592,37 @@
             this.label13.TabIndex = 75;
             this.label13.Text = "Stage/End Game";
             // 
-            // button9
+            // btnStageTrap
             // 
-            this.button9.BackColor = System.Drawing.Color.Red;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.Control;
-            this.button9.Location = new System.Drawing.Point(926, 457);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 70);
-            this.button9.TabIndex = 76;
-            this.button9.Tag = "False";
-            this.button9.Text = "X";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnStageTrap.BackColor = System.Drawing.Color.Red;
+            this.btnStageTrap.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStageTrap.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnStageTrap.Location = new System.Drawing.Point(926, 457);
+            this.btnStageTrap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStageTrap.Name = "btnStageTrap";
+            this.btnStageTrap.Size = new System.Drawing.Size(75, 70);
+            this.btnStageTrap.TabIndex = 76;
+            this.btnStageTrap.Tag = "False";
+            this.btnStageTrap.Text = "X";
+            this.btnStageTrap.UseVisualStyleBackColor = false;
+            this.btnStageTrap.Click += new System.EventHandler(this.button4_Click);
             // 
-            // comboBox1
+            // cmbStageParkClimb
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbStageParkClimb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStageParkClimb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStageParkClimb.FormattingEnabled = true;
+            this.cmbStageParkClimb.Items.AddRange(new object[] {
             "No, the robot did not park/climb",
-            "Yes, the robot parked.",
-            "Yes, on it\'s own chain.",
-            "Yes, with another bot.",
-            "Yes, with the whole alliance."});
-            this.comboBox1.Location = new System.Drawing.Point(374, 476);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(349, 30);
-            this.comboBox1.TabIndex = 74;
+            "Parked onstage, but did not climb",
+            "Yes, it climbed on it\'s own chain.",
+            "Yes, it climbed with another bot.",
+            "Yes, it climbed with the whole alliance."});
+            this.cmbStageParkClimb.Location = new System.Drawing.Point(374, 476);
+            this.cmbStageParkClimb.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbStageParkClimb.Name = "cmbStageParkClimb";
+            this.cmbStageParkClimb.Size = new System.Drawing.Size(349, 30);
+            this.cmbStageParkClimb.TabIndex = 74;
             // 
             // label16
             // 
@@ -629,19 +646,18 @@
             this.label14.TabIndex = 73;
             this.label14.Text = "Did the \r\nRobot Park \r\nor Climb?";
             // 
-            // btnClose
+            // btnSubmit
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Red;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Location = new System.Drawing.Point(493, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(46, 46);
-            this.btnClose.TabIndex = 76;
-            this.btnClose.Tag = "False";
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(1062, 390);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(157, 70);
+            this.btnSubmit.TabIndex = 4;
+            this.btnSubmit.Tag = "hidden";
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -649,17 +665,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 565);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnStageTrap);
+            this.Controls.Add(this.cmbStageParkClimb);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlAuto);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnNotes);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -703,28 +720,29 @@
         private System.Windows.Forms.TextBox txtAutoAmp;
         private System.Windows.Forms.TextBox txtAutoSpeaker;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtTeleAmp;
+        private System.Windows.Forms.TextBox txtTeleUnampSpeaker;
+        private System.Windows.Forms.Button btnAddTeleAmp;
+        private System.Windows.Forms.Button btnAddTeleUnampSpeaker;
+        private System.Windows.Forms.Button btnSubTeleAmp;
+        private System.Windows.Forms.Button btnSubTeleUnampSpeaker;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtTeleAmpSpeaker;
+        private System.Windows.Forms.Button btnAddTeleAmpSpeaker;
+        private System.Windows.Forms.Button btnSubTeleAmpSpeaker;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnNotes;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnStageTrap;
+        private System.Windows.Forms.ComboBox cmbStageParkClimb;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
 
