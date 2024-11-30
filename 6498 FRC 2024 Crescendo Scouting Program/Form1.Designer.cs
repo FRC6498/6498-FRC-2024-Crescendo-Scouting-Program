@@ -42,32 +42,38 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlAuto = new System.Windows.Forms.Panel();
-            this.txtAutoAmp = new System.Windows.Forms.TextBox();
-            this.txtAutoSpeaker = new System.Windows.Forms.TextBox();
-            this.btnAddAutoAmp = new System.Windows.Forms.Button();
-            this.btnAddAutoSpeaker = new System.Windows.Forms.Button();
-            this.btnSubAutoAmp = new System.Windows.Forms.Button();
-            this.btnSubAutoSpeaker = new System.Windows.Forms.Button();
             this.btnAutoTaxiCheck = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDeleteAutoAmpMiss = new System.Windows.Forms.Button();
+            this.btnDeleteAutoAmpScore = new System.Windows.Forms.Button();
+            this.lblAutoAmp = new System.Windows.Forms.Label();
+            this.btnAddAutoAmpMiss = new System.Windows.Forms.Button();
+            this.btnAddAutoAmpScore = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDeleteAutoSpeakerMiss = new System.Windows.Forms.Button();
+            this.btnDeleteAutoSpeakerScore = new System.Windows.Forms.Button();
+            this.lblAutoSpeaker = new System.Windows.Forms.Label();
+            this.btnAddAutoSpeakerMiss = new System.Windows.Forms.Button();
+            this.btnAddAutoSpeakerScore = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtTeleAmp = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.txtTeleAmpSpeaker = new System.Windows.Forms.TextBox();
-            this.txtTeleUnampSpeaker = new System.Windows.Forms.TextBox();
-            this.btnAddTeleAmpSpeaker = new System.Windows.Forms.Button();
-            this.btnAddTeleAmp = new System.Windows.Forms.Button();
-            this.btnAddTeleUnampSpeaker = new System.Windows.Forms.Button();
-            this.btnSubTeleAmpSpeaker = new System.Windows.Forms.Button();
-            this.btnSubTeleAmp = new System.Windows.Forms.Button();
-            this.btnSubTeleUnampSpeaker = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnDeleteTeleAmpMiss = new System.Windows.Forms.Button();
+            this.btnDeleteTeleAmpScore = new System.Windows.Forms.Button();
+            this.lblTeleAmp = new System.Windows.Forms.Label();
+            this.btnAddTeleAmpMiss = new System.Windows.Forms.Button();
+            this.btnAddTeleAmpScore = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnDeleteTeleSpeakerMiss = new System.Windows.Forms.Button();
+            this.btnDeleteTeleUnampSpeaker = new System.Windows.Forms.Button();
+            this.btnDeleteTeleAmpSpeaker = new System.Windows.Forms.Button();
+            this.lblTeleSpeaker = new System.Windows.Forms.Label();
+            this.btnAddTeleUnampSpeaker = new System.Windows.Forms.Button();
+            this.btnAddTeleSpeakerMiss = new System.Windows.Forms.Button();
+            this.btnAddTeleAmpSpeaker = new System.Windows.Forms.Button();
             this.btnNotes = new System.Windows.Forms.Button();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -76,9 +82,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.ofdOpen = new System.Windows.Forms.OpenFileDialog();
+            this.sfdSave = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.pnlAuto.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +108,7 @@
             // 
             this.txtInfoTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.txtInfoTeam.Location = new System.Drawing.Point(88, 86);
-            this.txtInfoTeam.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInfoTeam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInfoTeam.MaxLength = 8;
             this.txtInfoTeam.Name = "txtInfoTeam";
             this.txtInfoTeam.Size = new System.Drawing.Size(113, 32);
@@ -120,7 +132,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(207, 561);
             this.panel1.TabIndex = 2;
@@ -136,45 +148,49 @@
             // 
             this.btnShowFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowFolder.Location = new System.Drawing.Point(14, 487);
-            this.btnShowFolder.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowFolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnShowFolder.Name = "btnShowFolder";
             this.btnShowFolder.Size = new System.Drawing.Size(171, 58);
             this.btnShowFolder.TabIndex = 4;
             this.btnShowFolder.Text = "Show Folder";
             this.btnShowFolder.UseVisualStyleBackColor = true;
+            this.btnShowFolder.Click += new System.EventHandler(this.btnShowFolder_Click);
             // 
             // btnOpen
             // 
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.Location = new System.Drawing.Point(14, 423);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(171, 58);
             this.btnOpen.TabIndex = 4;
             this.btnOpen.Text = "Open File";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnNew
             // 
             this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.Location = new System.Drawing.Point(13, 360);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(171, 58);
             this.btnNew.TabIndex = 4;
             this.btnNew.Text = "New File";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // txtInfoScouterName
             // 
             this.txtInfoScouterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.txtInfoScouterName.Location = new System.Drawing.Point(14, 35);
-            this.txtInfoScouterName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInfoScouterName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInfoScouterName.MaxLength = 40;
             this.txtInfoScouterName.Name = "txtInfoScouterName";
             this.txtInfoScouterName.Size = new System.Drawing.Size(187, 32);
             this.txtInfoScouterName.TabIndex = 69;
             this.txtInfoScouterName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInfoScouterName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInfoScouterName_KeyPress);
             // 
             // label3
             // 
@@ -200,7 +216,7 @@
             "Red 2",
             "Red 3"});
             this.cmbInfoPosition.Location = new System.Drawing.Point(14, 161);
-            this.cmbInfoPosition.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbInfoPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbInfoPosition.Name = "cmbInfoPosition";
             this.cmbInfoPosition.Size = new System.Drawing.Size(187, 30);
             this.cmbInfoPosition.TabIndex = 67;
@@ -209,12 +225,13 @@
             // 
             this.txtInfoMatchNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.txtInfoMatchNumber.Location = new System.Drawing.Point(110, 229);
-            this.txtInfoMatchNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInfoMatchNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInfoMatchNumber.MaxLength = 3;
             this.txtInfoMatchNumber.Name = "txtInfoMatchNumber";
             this.txtInfoMatchNumber.Size = new System.Drawing.Size(90, 32);
             this.txtInfoMatchNumber.TabIndex = 1;
             this.txtInfoMatchNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInfoMatchNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInfoMatchNumber_KeyPress);
             // 
             // label4
             // 
@@ -241,101 +258,31 @@
             // pnlAuto
             // 
             this.pnlAuto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAuto.Controls.Add(this.txtAutoAmp);
-            this.pnlAuto.Controls.Add(this.txtAutoSpeaker);
-            this.pnlAuto.Controls.Add(this.btnAddAutoAmp);
-            this.pnlAuto.Controls.Add(this.btnAddAutoSpeaker);
-            this.pnlAuto.Controls.Add(this.btnSubAutoAmp);
-            this.pnlAuto.Controls.Add(this.btnSubAutoSpeaker);
             this.pnlAuto.Controls.Add(this.btnAutoTaxiCheck);
             this.pnlAuto.Controls.Add(this.label5);
             this.pnlAuto.Controls.Add(this.label6);
-            this.pnlAuto.Controls.Add(this.label8);
-            this.pnlAuto.Controls.Add(this.label7);
+            this.pnlAuto.Controls.Add(this.groupBox2);
+            this.pnlAuto.Controls.Add(this.groupBox1);
             this.pnlAuto.Location = new System.Drawing.Point(206, 0);
-            this.pnlAuto.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAuto.Name = "pnlAuto";
-            this.pnlAuto.Size = new System.Drawing.Size(483, 380);
+            this.pnlAuto.Size = new System.Drawing.Size(483, 433);
             this.pnlAuto.TabIndex = 3;
-            // 
-            // txtAutoAmp
-            // 
-            this.txtAutoAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutoAmp.Location = new System.Drawing.Point(278, 317);
-            this.txtAutoAmp.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAutoAmp.MaxLength = 3;
-            this.txtAutoAmp.Name = "txtAutoAmp";
-            this.txtAutoAmp.ReadOnly = true;
-            this.txtAutoAmp.Size = new System.Drawing.Size(90, 49);
-            this.txtAutoAmp.TabIndex = 72;
-            this.txtAutoAmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtAutoSpeaker
-            // 
-            this.txtAutoSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutoSpeaker.Location = new System.Drawing.Point(278, 209);
-            this.txtAutoSpeaker.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAutoSpeaker.MaxLength = 3;
-            this.txtAutoSpeaker.Name = "txtAutoSpeaker";
-            this.txtAutoSpeaker.ReadOnly = true;
-            this.txtAutoSpeaker.Size = new System.Drawing.Size(90, 49);
-            this.txtAutoSpeaker.TabIndex = 72;
-            this.txtAutoSpeaker.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnAddAutoAmp
-            // 
-            this.btnAddAutoAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAutoAmp.Location = new System.Drawing.Point(376, 311);
-            this.btnAddAutoAmp.Name = "btnAddAutoAmp";
-            this.btnAddAutoAmp.Size = new System.Drawing.Size(60, 60);
-            this.btnAddAutoAmp.TabIndex = 71;
-            this.btnAddAutoAmp.Text = "+";
-            this.btnAddAutoAmp.UseVisualStyleBackColor = true;
-            // 
-            // btnAddAutoSpeaker
-            // 
-            this.btnAddAutoSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAutoSpeaker.Location = new System.Drawing.Point(376, 204);
-            this.btnAddAutoSpeaker.Name = "btnAddAutoSpeaker";
-            this.btnAddAutoSpeaker.Size = new System.Drawing.Size(60, 60);
-            this.btnAddAutoSpeaker.TabIndex = 71;
-            this.btnAddAutoSpeaker.Text = "+";
-            this.btnAddAutoSpeaker.UseVisualStyleBackColor = true;
-            // 
-            // btnSubAutoAmp
-            // 
-            this.btnSubAutoAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubAutoAmp.Location = new System.Drawing.Point(209, 311);
-            this.btnSubAutoAmp.Name = "btnSubAutoAmp";
-            this.btnSubAutoAmp.Size = new System.Drawing.Size(60, 60);
-            this.btnSubAutoAmp.TabIndex = 71;
-            this.btnSubAutoAmp.Text = "-";
-            this.btnSubAutoAmp.UseVisualStyleBackColor = true;
-            // 
-            // btnSubAutoSpeaker
-            // 
-            this.btnSubAutoSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubAutoSpeaker.Location = new System.Drawing.Point(209, 204);
-            this.btnSubAutoSpeaker.Name = "btnSubAutoSpeaker";
-            this.btnSubAutoSpeaker.Size = new System.Drawing.Size(60, 60);
-            this.btnSubAutoSpeaker.TabIndex = 71;
-            this.btnSubAutoSpeaker.Text = "-";
-            this.btnSubAutoSpeaker.UseVisualStyleBackColor = true;
             // 
             // btnAutoTaxiCheck
             // 
             this.btnAutoTaxiCheck.BackColor = System.Drawing.Color.Red;
             this.btnAutoTaxiCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAutoTaxiCheck.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAutoTaxiCheck.Location = new System.Drawing.Point(286, 100);
-            this.btnAutoTaxiCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAutoTaxiCheck.Location = new System.Drawing.Point(287, 54);
+            this.btnAutoTaxiCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAutoTaxiCheck.Name = "btnAutoTaxiCheck";
             this.btnAutoTaxiCheck.Size = new System.Drawing.Size(75, 70);
             this.btnAutoTaxiCheck.TabIndex = 70;
             this.btnAutoTaxiCheck.Tag = "False";
             this.btnAutoTaxiCheck.Text = "X";
             this.btnAutoTaxiCheck.UseVisualStyleBackColor = false;
-            this.btnAutoTaxiCheck.Click += new System.EventHandler(this.button4_Click);
+            this.btnAutoTaxiCheck.Click += new System.EventHandler(this.btnCheckboxes_click);
             // 
             // label5
             // 
@@ -352,69 +299,191 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 104);
+            this.label6.Location = new System.Drawing.Point(53, 63);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(162, 52);
             this.label6.TabIndex = 0;
             this.label6.Text = "Robot left \r\nstarting zone?";
             // 
-            // label8
+            // groupBox2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 311);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(152, 52);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Notes scored\r\nin Amp:";
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.btnDeleteAutoAmpMiss);
+            this.groupBox2.Controls.Add(this.btnDeleteAutoAmpScore);
+            this.groupBox2.Controls.Add(this.lblAutoAmp);
+            this.groupBox2.Controls.Add(this.btnAddAutoAmpMiss);
+            this.groupBox2.Controls.Add(this.btnAddAutoAmpScore);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(10, 272);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(466, 155);
+            this.groupBox2.TabIndex = 72;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Amp";
             // 
-            // label7
+            // btnDeleteAutoAmpMiss
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 206);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 52);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Notes scored\r\nin Speaker:";
+            this.btnDeleteAutoAmpMiss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteAutoAmpMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAutoAmpMiss.Location = new System.Drawing.Point(303, 80);
+            this.btnDeleteAutoAmpMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteAutoAmpMiss.Name = "btnDeleteAutoAmpMiss";
+            this.btnDeleteAutoAmpMiss.Size = new System.Drawing.Size(96, 67);
+            this.btnDeleteAutoAmpMiss.TabIndex = 71;
+            this.btnDeleteAutoAmpMiss.Tag = "autoAmpMiss";
+            this.btnDeleteAutoAmpMiss.Text = "Delete\r\nMiss";
+            this.btnDeleteAutoAmpMiss.UseVisualStyleBackColor = false;
+            this.btnDeleteAutoAmpMiss.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnDeleteAutoAmpScore
+            // 
+            this.btnDeleteAutoAmpScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteAutoAmpScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAutoAmpScore.Location = new System.Drawing.Point(165, 83);
+            this.btnDeleteAutoAmpScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteAutoAmpScore.Name = "btnDeleteAutoAmpScore";
+            this.btnDeleteAutoAmpScore.Size = new System.Drawing.Size(101, 67);
+            this.btnDeleteAutoAmpScore.TabIndex = 71;
+            this.btnDeleteAutoAmpScore.Tag = "autoAmp";
+            this.btnDeleteAutoAmpScore.Text = "Delete\r\nScore";
+            this.btnDeleteAutoAmpScore.UseVisualStyleBackColor = false;
+            this.btnDeleteAutoAmpScore.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // lblAutoAmp
+            // 
+            this.lblAutoAmp.AutoSize = true;
+            this.lblAutoAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutoAmp.Location = new System.Drawing.Point(9, 52);
+            this.lblAutoAmp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAutoAmp.Name = "lblAutoAmp";
+            this.lblAutoAmp.Size = new System.Drawing.Size(114, 52);
+            this.lblAutoAmp.TabIndex = 0;
+            this.lblAutoAmp.Text = "Scored: 0\r\nMisses: 0";
+            // 
+            // btnAddAutoAmpMiss
+            // 
+            this.btnAddAutoAmpMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAutoAmpMiss.Location = new System.Drawing.Point(303, 15);
+            this.btnAddAutoAmpMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAutoAmpMiss.Name = "btnAddAutoAmpMiss";
+            this.btnAddAutoAmpMiss.Size = new System.Drawing.Size(96, 63);
+            this.btnAddAutoAmpMiss.TabIndex = 71;
+            this.btnAddAutoAmpMiss.Tag = "autoAmpMiss";
+            this.btnAddAutoAmpMiss.Text = "Miss";
+            this.btnAddAutoAmpMiss.UseVisualStyleBackColor = true;
+            this.btnAddAutoAmpMiss.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnAddAutoAmpScore
+            // 
+            this.btnAddAutoAmpScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAutoAmpScore.Location = new System.Drawing.Point(165, 15);
+            this.btnAddAutoAmpScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAutoAmpScore.Name = "btnAddAutoAmpScore";
+            this.btnAddAutoAmpScore.Size = new System.Drawing.Size(101, 63);
+            this.btnAddAutoAmpScore.TabIndex = 71;
+            this.btnAddAutoAmpScore.Tag = "autoAmp";
+            this.btnAddAutoAmpScore.Text = "Score";
+            this.btnAddAutoAmpScore.UseVisualStyleBackColor = true;
+            this.btnAddAutoAmpScore.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnDeleteAutoSpeakerMiss);
+            this.groupBox1.Controls.Add(this.btnDeleteAutoSpeakerScore);
+            this.groupBox1.Controls.Add(this.lblAutoSpeaker);
+            this.groupBox1.Controls.Add(this.btnAddAutoSpeakerMiss);
+            this.groupBox1.Controls.Add(this.btnAddAutoSpeakerScore);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(10, 118);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(466, 153);
+            this.groupBox1.TabIndex = 72;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Speaker";
+            // 
+            // btnDeleteAutoSpeakerMiss
+            // 
+            this.btnDeleteAutoSpeakerMiss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteAutoSpeakerMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAutoSpeakerMiss.Location = new System.Drawing.Point(303, 80);
+            this.btnDeleteAutoSpeakerMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteAutoSpeakerMiss.Name = "btnDeleteAutoSpeakerMiss";
+            this.btnDeleteAutoSpeakerMiss.Size = new System.Drawing.Size(96, 67);
+            this.btnDeleteAutoSpeakerMiss.TabIndex = 71;
+            this.btnDeleteAutoSpeakerMiss.Tag = "autoSpeakerMiss";
+            this.btnDeleteAutoSpeakerMiss.Text = "Delete\r\nMiss";
+            this.btnDeleteAutoSpeakerMiss.UseVisualStyleBackColor = false;
+            this.btnDeleteAutoSpeakerMiss.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnDeleteAutoSpeakerScore
+            // 
+            this.btnDeleteAutoSpeakerScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteAutoSpeakerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAutoSpeakerScore.Location = new System.Drawing.Point(165, 83);
+            this.btnDeleteAutoSpeakerScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteAutoSpeakerScore.Name = "btnDeleteAutoSpeakerScore";
+            this.btnDeleteAutoSpeakerScore.Size = new System.Drawing.Size(101, 67);
+            this.btnDeleteAutoSpeakerScore.TabIndex = 71;
+            this.btnDeleteAutoSpeakerScore.Tag = "autoSpeaker";
+            this.btnDeleteAutoSpeakerScore.Text = "Delete\r\nScore";
+            this.btnDeleteAutoSpeakerScore.UseVisualStyleBackColor = false;
+            this.btnDeleteAutoSpeakerScore.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // lblAutoSpeaker
+            // 
+            this.lblAutoSpeaker.AutoSize = true;
+            this.lblAutoSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutoSpeaker.Location = new System.Drawing.Point(9, 52);
+            this.lblAutoSpeaker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAutoSpeaker.Name = "lblAutoSpeaker";
+            this.lblAutoSpeaker.Size = new System.Drawing.Size(114, 52);
+            this.lblAutoSpeaker.TabIndex = 0;
+            this.lblAutoSpeaker.Text = "Scored: 0\r\nMisses: 0";
+            // 
+            // btnAddAutoSpeakerMiss
+            // 
+            this.btnAddAutoSpeakerMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAutoSpeakerMiss.Location = new System.Drawing.Point(303, 15);
+            this.btnAddAutoSpeakerMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAutoSpeakerMiss.Name = "btnAddAutoSpeakerMiss";
+            this.btnAddAutoSpeakerMiss.Size = new System.Drawing.Size(96, 63);
+            this.btnAddAutoSpeakerMiss.TabIndex = 71;
+            this.btnAddAutoSpeakerMiss.Tag = "autoSpeakerMiss";
+            this.btnAddAutoSpeakerMiss.Text = "Miss";
+            this.btnAddAutoSpeakerMiss.UseVisualStyleBackColor = true;
+            this.btnAddAutoSpeakerMiss.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnAddAutoSpeakerScore
+            // 
+            this.btnAddAutoSpeakerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAutoSpeakerScore.Location = new System.Drawing.Point(165, 15);
+            this.btnAddAutoSpeakerScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAutoSpeakerScore.Name = "btnAddAutoSpeakerScore";
+            this.btnAddAutoSpeakerScore.Size = new System.Drawing.Size(101, 63);
+            this.btnAddAutoSpeakerScore.TabIndex = 71;
+            this.btnAddAutoSpeakerScore.Tag = "autoSpeaker";
+            this.btnAddAutoSpeakerScore.Text = "Score";
+            this.btnAddAutoSpeakerScore.UseVisualStyleBackColor = true;
+            this.btnAddAutoSpeakerScore.Click += new System.EventHandler(this.addedButtonClicked);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtTeleAmp);
             this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.txtTeleAmpSpeaker);
-            this.panel2.Controls.Add(this.txtTeleUnampSpeaker);
-            this.panel2.Controls.Add(this.btnAddTeleAmpSpeaker);
-            this.panel2.Controls.Add(this.btnAddTeleAmp);
-            this.panel2.Controls.Add(this.btnAddTeleUnampSpeaker);
-            this.panel2.Controls.Add(this.btnSubTeleAmpSpeaker);
-            this.panel2.Controls.Add(this.btnSubTeleAmp);
-            this.panel2.Controls.Add(this.btnSubTeleUnampSpeaker);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.groupBox4);
+            this.panel2.Controls.Add(this.groupBox3);
             this.panel2.Location = new System.Drawing.Point(688, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(543, 380);
+            this.panel2.Size = new System.Drawing.Size(565, 433);
             this.panel2.TabIndex = 3;
-            // 
-            // txtTeleAmp
-            // 
-            this.txtTeleAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeleAmp.Location = new System.Drawing.Point(353, 317);
-            this.txtTeleAmp.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTeleAmp.MaxLength = 3;
-            this.txtTeleAmp.Name = "txtTeleAmp";
-            this.txtTeleAmp.ReadOnly = true;
-            this.txtTeleAmp.Size = new System.Drawing.Size(90, 49);
-            this.txtTeleAmp.TabIndex = 72;
-            this.txtTeleAmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnClose
             // 
@@ -422,7 +491,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnClose.Location = new System.Drawing.Point(493, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(46, 46);
             this.btnClose.TabIndex = 76;
@@ -430,90 +499,6 @@
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // txtTeleAmpSpeaker
-            // 
-            this.txtTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeleAmpSpeaker.Location = new System.Drawing.Point(353, 211);
-            this.txtTeleAmpSpeaker.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTeleAmpSpeaker.MaxLength = 3;
-            this.txtTeleAmpSpeaker.Name = "txtTeleAmpSpeaker";
-            this.txtTeleAmpSpeaker.ReadOnly = true;
-            this.txtTeleAmpSpeaker.Size = new System.Drawing.Size(90, 49);
-            this.txtTeleAmpSpeaker.TabIndex = 72;
-            this.txtTeleAmpSpeaker.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTeleUnampSpeaker
-            // 
-            this.txtTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeleUnampSpeaker.Location = new System.Drawing.Point(353, 103);
-            this.txtTeleUnampSpeaker.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTeleUnampSpeaker.MaxLength = 3;
-            this.txtTeleUnampSpeaker.Name = "txtTeleUnampSpeaker";
-            this.txtTeleUnampSpeaker.ReadOnly = true;
-            this.txtTeleUnampSpeaker.Size = new System.Drawing.Size(90, 49);
-            this.txtTeleUnampSpeaker.TabIndex = 72;
-            this.txtTeleUnampSpeaker.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnAddTeleAmpSpeaker
-            // 
-            this.btnAddTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTeleAmpSpeaker.Location = new System.Drawing.Point(451, 206);
-            this.btnAddTeleAmpSpeaker.Name = "btnAddTeleAmpSpeaker";
-            this.btnAddTeleAmpSpeaker.Size = new System.Drawing.Size(60, 60);
-            this.btnAddTeleAmpSpeaker.TabIndex = 71;
-            this.btnAddTeleAmpSpeaker.Text = "+";
-            this.btnAddTeleAmpSpeaker.UseVisualStyleBackColor = true;
-            // 
-            // btnAddTeleAmp
-            // 
-            this.btnAddTeleAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTeleAmp.Location = new System.Drawing.Point(451, 311);
-            this.btnAddTeleAmp.Name = "btnAddTeleAmp";
-            this.btnAddTeleAmp.Size = new System.Drawing.Size(60, 60);
-            this.btnAddTeleAmp.TabIndex = 71;
-            this.btnAddTeleAmp.Text = "+";
-            this.btnAddTeleAmp.UseVisualStyleBackColor = true;
-            // 
-            // btnAddTeleUnampSpeaker
-            // 
-            this.btnAddTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTeleUnampSpeaker.Location = new System.Drawing.Point(451, 98);
-            this.btnAddTeleUnampSpeaker.Name = "btnAddTeleUnampSpeaker";
-            this.btnAddTeleUnampSpeaker.Size = new System.Drawing.Size(60, 60);
-            this.btnAddTeleUnampSpeaker.TabIndex = 71;
-            this.btnAddTeleUnampSpeaker.Text = "+";
-            this.btnAddTeleUnampSpeaker.UseVisualStyleBackColor = true;
-            // 
-            // btnSubTeleAmpSpeaker
-            // 
-            this.btnSubTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubTeleAmpSpeaker.Location = new System.Drawing.Point(284, 206);
-            this.btnSubTeleAmpSpeaker.Name = "btnSubTeleAmpSpeaker";
-            this.btnSubTeleAmpSpeaker.Size = new System.Drawing.Size(60, 60);
-            this.btnSubTeleAmpSpeaker.TabIndex = 71;
-            this.btnSubTeleAmpSpeaker.Text = "-";
-            this.btnSubTeleAmpSpeaker.UseVisualStyleBackColor = true;
-            // 
-            // btnSubTeleAmp
-            // 
-            this.btnSubTeleAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubTeleAmp.Location = new System.Drawing.Point(284, 311);
-            this.btnSubTeleAmp.Name = "btnSubTeleAmp";
-            this.btnSubTeleAmp.Size = new System.Drawing.Size(60, 60);
-            this.btnSubTeleAmp.TabIndex = 71;
-            this.btnSubTeleAmp.Text = "-";
-            this.btnSubTeleAmp.UseVisualStyleBackColor = true;
-            // 
-            // btnSubTeleUnampSpeaker
-            // 
-            this.btnSubTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubTeleUnampSpeaker.Location = new System.Drawing.Point(284, 98);
-            this.btnSubTeleUnampSpeaker.Name = "btnSubTeleUnampSpeaker";
-            this.btnSubTeleUnampSpeaker.Size = new System.Drawing.Size(60, 60);
-            this.btnSubTeleUnampSpeaker.TabIndex = 71;
-            this.btnSubTeleUnampSpeaker.Text = "-";
-            this.btnSubTeleUnampSpeaker.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -526,51 +511,213 @@
             this.label9.TabIndex = 69;
             this.label9.Text = "Tele-Op";
             // 
-            // label10
+            // groupBox4
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(40, 100);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(211, 52);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Unamplified Notes\r\nscored in Speaker:";
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.btnDeleteTeleAmpMiss);
+            this.groupBox4.Controls.Add(this.btnDeleteTeleAmpScore);
+            this.groupBox4.Controls.Add(this.lblTeleAmp);
+            this.groupBox4.Controls.Add(this.btnAddTeleAmpMiss);
+            this.groupBox4.Controls.Add(this.btnAddTeleAmpScore);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(16, 253);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(538, 155);
+            this.groupBox4.TabIndex = 72;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Amp";
             // 
-            // label11
+            // btnDeleteTeleAmpMiss
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(40, 317);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 52);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Notes scored\r\nin Amp:";
+            this.btnDeleteTeleAmpMiss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteTeleAmpMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTeleAmpMiss.Location = new System.Drawing.Point(391, 83);
+            this.btnDeleteTeleAmpMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteTeleAmpMiss.Name = "btnDeleteTeleAmpMiss";
+            this.btnDeleteTeleAmpMiss.Size = new System.Drawing.Size(120, 67);
+            this.btnDeleteTeleAmpMiss.TabIndex = 71;
+            this.btnDeleteTeleAmpMiss.Tag = "teleAmpMiss";
+            this.btnDeleteTeleAmpMiss.Text = "Delete\r\nMiss";
+            this.btnDeleteTeleAmpMiss.UseVisualStyleBackColor = false;
+            this.btnDeleteTeleAmpMiss.Click += new System.EventHandler(this.addedButtonClicked);
             // 
-            // label12
+            // btnDeleteTeleAmpScore
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(40, 206);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(211, 52);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Amplified Notes\r\nscored in Speaker:";
+            this.btnDeleteTeleAmpScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteTeleAmpScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTeleAmpScore.Location = new System.Drawing.Point(238, 83);
+            this.btnDeleteTeleAmpScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteTeleAmpScore.Name = "btnDeleteTeleAmpScore";
+            this.btnDeleteTeleAmpScore.Size = new System.Drawing.Size(107, 67);
+            this.btnDeleteTeleAmpScore.TabIndex = 71;
+            this.btnDeleteTeleAmpScore.Tag = "teleAmp";
+            this.btnDeleteTeleAmpScore.Text = "Delete\r\nScore";
+            this.btnDeleteTeleAmpScore.UseVisualStyleBackColor = false;
+            this.btnDeleteTeleAmpScore.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // lblTeleAmp
+            // 
+            this.lblTeleAmp.AutoSize = true;
+            this.lblTeleAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeleAmp.Location = new System.Drawing.Point(4, 57);
+            this.lblTeleAmp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTeleAmp.Name = "lblTeleAmp";
+            this.lblTeleAmp.Size = new System.Drawing.Size(114, 52);
+            this.lblTeleAmp.TabIndex = 0;
+            this.lblTeleAmp.Text = "Scored: 0\r\nMisses: 0";
+            // 
+            // btnAddTeleAmpMiss
+            // 
+            this.btnAddTeleAmpMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleAmpMiss.Location = new System.Drawing.Point(391, 14);
+            this.btnAddTeleAmpMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTeleAmpMiss.Name = "btnAddTeleAmpMiss";
+            this.btnAddTeleAmpMiss.Size = new System.Drawing.Size(120, 63);
+            this.btnAddTeleAmpMiss.TabIndex = 71;
+            this.btnAddTeleAmpMiss.Tag = "teleAmpMiss";
+            this.btnAddTeleAmpMiss.Text = "Miss";
+            this.btnAddTeleAmpMiss.UseVisualStyleBackColor = true;
+            this.btnAddTeleAmpMiss.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnAddTeleAmpScore
+            // 
+            this.btnAddTeleAmpScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleAmpScore.Location = new System.Drawing.Point(238, 15);
+            this.btnAddTeleAmpScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTeleAmpScore.Name = "btnAddTeleAmpScore";
+            this.btnAddTeleAmpScore.Size = new System.Drawing.Size(107, 63);
+            this.btnAddTeleAmpScore.TabIndex = 71;
+            this.btnAddTeleAmpScore.Tag = "teleAmp";
+            this.btnAddTeleAmpScore.Text = "Score";
+            this.btnAddTeleAmpScore.UseVisualStyleBackColor = true;
+            this.btnAddTeleAmpScore.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btnDeleteTeleSpeakerMiss);
+            this.groupBox3.Controls.Add(this.btnDeleteTeleUnampSpeaker);
+            this.groupBox3.Controls.Add(this.btnDeleteTeleAmpSpeaker);
+            this.groupBox3.Controls.Add(this.lblTeleSpeaker);
+            this.groupBox3.Controls.Add(this.btnAddTeleUnampSpeaker);
+            this.groupBox3.Controls.Add(this.btnAddTeleSpeakerMiss);
+            this.groupBox3.Controls.Add(this.btnAddTeleAmpSpeaker);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(12, 75);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(549, 156);
+            this.groupBox3.TabIndex = 72;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Speaker";
+            // 
+            // btnDeleteTeleSpeakerMiss
+            // 
+            this.btnDeleteTeleSpeakerMiss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteTeleSpeakerMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTeleSpeakerMiss.Location = new System.Drawing.Point(449, 85);
+            this.btnDeleteTeleSpeakerMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteTeleSpeakerMiss.Name = "btnDeleteTeleSpeakerMiss";
+            this.btnDeleteTeleSpeakerMiss.Size = new System.Drawing.Size(93, 67);
+            this.btnDeleteTeleSpeakerMiss.TabIndex = 71;
+            this.btnDeleteTeleSpeakerMiss.Tag = "teleSpeakerMiss";
+            this.btnDeleteTeleSpeakerMiss.Text = "Delete\r\nMiss";
+            this.btnDeleteTeleSpeakerMiss.UseVisualStyleBackColor = false;
+            this.btnDeleteTeleSpeakerMiss.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnDeleteTeleUnampSpeaker
+            // 
+            this.btnDeleteTeleUnampSpeaker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTeleUnampSpeaker.Location = new System.Drawing.Point(239, 85);
+            this.btnDeleteTeleUnampSpeaker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteTeleUnampSpeaker.Name = "btnDeleteTeleUnampSpeaker";
+            this.btnDeleteTeleUnampSpeaker.Size = new System.Drawing.Size(94, 67);
+            this.btnDeleteTeleUnampSpeaker.TabIndex = 71;
+            this.btnDeleteTeleUnampSpeaker.Tag = "teleUnampSpeaker";
+            this.btnDeleteTeleUnampSpeaker.Text = "Delete\r\nUnamp (~)";
+            this.btnDeleteTeleUnampSpeaker.UseVisualStyleBackColor = false;
+            this.btnDeleteTeleUnampSpeaker.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnDeleteTeleAmpSpeaker
+            // 
+            this.btnDeleteTeleAmpSpeaker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.btnDeleteTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTeleAmpSpeaker.Location = new System.Drawing.Point(348, 85);
+            this.btnDeleteTeleAmpSpeaker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteTeleAmpSpeaker.Name = "btnDeleteTeleAmpSpeaker";
+            this.btnDeleteTeleAmpSpeaker.Size = new System.Drawing.Size(94, 67);
+            this.btnDeleteTeleAmpSpeaker.TabIndex = 71;
+            this.btnDeleteTeleAmpSpeaker.Tag = "teleAmpSpeaker";
+            this.btnDeleteTeleAmpSpeaker.Text = "Delete\r\nAmp (+)";
+            this.btnDeleteTeleAmpSpeaker.UseVisualStyleBackColor = false;
+            this.btnDeleteTeleAmpSpeaker.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // lblTeleSpeaker
+            // 
+            this.lblTeleSpeaker.AutoSize = true;
+            this.lblTeleSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeleSpeaker.Location = new System.Drawing.Point(4, 43);
+            this.lblTeleSpeaker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTeleSpeaker.Name = "lblTeleSpeaker";
+            this.lblTeleSpeaker.Size = new System.Drawing.Size(220, 78);
+            this.lblTeleSpeaker.TabIndex = 0;
+            this.lblTeleSpeaker.Text = "Scored (Unamp.): 0\r\nScored (Amp.): 0\r\nMisses: 0";
+            // 
+            // btnAddTeleUnampSpeaker
+            // 
+            this.btnAddTeleUnampSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleUnampSpeaker.Location = new System.Drawing.Point(239, 18);
+            this.btnAddTeleUnampSpeaker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTeleUnampSpeaker.Name = "btnAddTeleUnampSpeaker";
+            this.btnAddTeleUnampSpeaker.Size = new System.Drawing.Size(94, 63);
+            this.btnAddTeleUnampSpeaker.TabIndex = 71;
+            this.btnAddTeleUnampSpeaker.Tag = "teleUnampSpeaker";
+            this.btnAddTeleUnampSpeaker.Text = "Unamp\r\n(~)";
+            this.btnAddTeleUnampSpeaker.UseVisualStyleBackColor = true;
+            this.btnAddTeleUnampSpeaker.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnAddTeleSpeakerMiss
+            // 
+            this.btnAddTeleSpeakerMiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleSpeakerMiss.Location = new System.Drawing.Point(449, 18);
+            this.btnAddTeleSpeakerMiss.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTeleSpeakerMiss.Name = "btnAddTeleSpeakerMiss";
+            this.btnAddTeleSpeakerMiss.Size = new System.Drawing.Size(93, 63);
+            this.btnAddTeleSpeakerMiss.TabIndex = 71;
+            this.btnAddTeleSpeakerMiss.Tag = "teleSpeakerMiss";
+            this.btnAddTeleSpeakerMiss.Text = "Miss";
+            this.btnAddTeleSpeakerMiss.UseVisualStyleBackColor = true;
+            this.btnAddTeleSpeakerMiss.Click += new System.EventHandler(this.addedButtonClicked);
+            // 
+            // btnAddTeleAmpSpeaker
+            // 
+            this.btnAddTeleAmpSpeaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeleAmpSpeaker.Location = new System.Drawing.Point(348, 17);
+            this.btnAddTeleAmpSpeaker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTeleAmpSpeaker.Name = "btnAddTeleAmpSpeaker";
+            this.btnAddTeleAmpSpeaker.Size = new System.Drawing.Size(94, 63);
+            this.btnAddTeleAmpSpeaker.TabIndex = 71;
+            this.btnAddTeleAmpSpeaker.Tag = "teleAmpSpeaker";
+            this.btnAddTeleAmpSpeaker.Text = "Amp\r\n(+)";
+            this.btnAddTeleAmpSpeaker.UseVisualStyleBackColor = true;
+            this.btnAddTeleAmpSpeaker.Click += new System.EventHandler(this.addedButtonClicked);
             // 
             // btnNotes
             // 
             this.btnNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotes.Location = new System.Drawing.Point(1063, 476);
-            this.btnNotes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNotes.Location = new System.Drawing.Point(1063, 512);
+            this.btnNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNotes.Name = "btnNotes";
-            this.btnNotes.Size = new System.Drawing.Size(157, 70);
+            this.btnNotes.Size = new System.Drawing.Size(157, 45);
             this.btnNotes.TabIndex = 4;
             this.btnNotes.Tag = "hidden";
             this.btnNotes.Text = "Show Notes";
             this.btnNotes.UseVisualStyleBackColor = true;
-            this.btnNotes.Click += new System.EventHandler(this.button7_Click);
+            this.btnNotes.Click += new System.EventHandler(this.btnNotes_Click);
             // 
             // txtNotes
             // 
@@ -580,15 +727,16 @@
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(1207, 149);
             this.txtNotes.TabIndex = 71;
+            this.txtNotes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotes_KeyPress);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(475, 382);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(412, 440);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(407, 55);
+            this.label13.Size = new System.Drawing.Size(296, 39);
             this.label13.TabIndex = 75;
             this.label13.Text = "Stage/End Game";
             // 
@@ -597,15 +745,15 @@
             this.btnStageTrap.BackColor = System.Drawing.Color.Red;
             this.btnStageTrap.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStageTrap.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnStageTrap.Location = new System.Drawing.Point(926, 457);
-            this.btnStageTrap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStageTrap.Location = new System.Drawing.Point(926, 472);
+            this.btnStageTrap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStageTrap.Name = "btnStageTrap";
             this.btnStageTrap.Size = new System.Drawing.Size(75, 70);
             this.btnStageTrap.TabIndex = 76;
             this.btnStageTrap.Tag = "False";
             this.btnStageTrap.Text = "X";
             this.btnStageTrap.UseVisualStyleBackColor = false;
-            this.btnStageTrap.Click += new System.EventHandler(this.button4_Click);
+            this.btnStageTrap.Click += new System.EventHandler(this.btnCheckboxes_click);
             // 
             // cmbStageParkClimb
             // 
@@ -613,13 +761,13 @@
             this.cmbStageParkClimb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStageParkClimb.FormattingEnabled = true;
             this.cmbStageParkClimb.Items.AddRange(new object[] {
-            "No, the robot did not park/climb",
-            "Parked onstage, but did not climb",
-            "Yes, it climbed on it\'s own chain.",
-            "Yes, it climbed with another bot.",
-            "Yes, it climbed with the whole alliance."});
-            this.cmbStageParkClimb.Location = new System.Drawing.Point(374, 476);
-            this.cmbStageParkClimb.Margin = new System.Windows.Forms.Padding(2);
+            "Did not park onstage or climb",
+            "Parked onstage",
+            "Climbed alone",
+            "Climbed with a teammate",
+            "Climbed with entire alliance"});
+            this.cmbStageParkClimb.Location = new System.Drawing.Point(376, 512);
+            this.cmbStageParkClimb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbStageParkClimb.Name = "cmbStageParkClimb";
             this.cmbStageParkClimb.Size = new System.Drawing.Size(349, 30);
             this.cmbStageParkClimb.TabIndex = 74;
@@ -628,7 +776,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(756, 457);
+            this.label16.Location = new System.Drawing.Point(754, 467);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(166, 78);
@@ -639,7 +787,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(224, 457);
+            this.label14.Location = new System.Drawing.Point(226, 467);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(138, 78);
@@ -650,20 +798,21 @@
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(1062, 390);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubmit.Location = new System.Drawing.Point(1063, 456);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(157, 70);
+            this.btnSubmit.Size = new System.Drawing.Size(157, 52);
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Tag = "hidden";
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1231, 565);
+            this.ClientSize = new System.Drawing.Size(1255, 562);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnStageTrap);
             this.Controls.Add(this.cmbStageParkClimb);
@@ -676,7 +825,7 @@
             this.Controls.Add(this.btnNotes);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -686,8 +835,16 @@
             this.panel1.PerformLayout();
             this.pnlAuto.ResumeLayout(false);
             this.pnlAuto.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -711,28 +868,8 @@
         private System.Windows.Forms.Button btnAutoTaxiCheck;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnSubAutoSpeaker;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnAddAutoAmp;
-        private System.Windows.Forms.Button btnAddAutoSpeaker;
-        private System.Windows.Forms.Button btnSubAutoAmp;
-        private System.Windows.Forms.TextBox txtAutoAmp;
-        private System.Windows.Forms.TextBox txtAutoSpeaker;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtTeleAmp;
-        private System.Windows.Forms.TextBox txtTeleUnampSpeaker;
-        private System.Windows.Forms.Button btnAddTeleAmp;
-        private System.Windows.Forms.Button btnAddTeleUnampSpeaker;
-        private System.Windows.Forms.Button btnSubTeleAmp;
-        private System.Windows.Forms.Button btnSubTeleUnampSpeaker;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtTeleAmpSpeaker;
-        private System.Windows.Forms.Button btnAddTeleAmpSpeaker;
-        private System.Windows.Forms.Button btnSubTeleAmpSpeaker;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnNotes;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtNotes;
@@ -743,6 +880,34 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnDeleteAutoSpeakerScore;
+        private System.Windows.Forms.Button btnDeleteAutoSpeakerMiss;
+        private System.Windows.Forms.Button btnAddAutoSpeakerScore;
+        private System.Windows.Forms.Button btnAddAutoSpeakerMiss;
+        private System.Windows.Forms.Label lblAutoSpeaker;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnDeleteAutoAmpMiss;
+        private System.Windows.Forms.Button btnDeleteAutoAmpScore;
+        private System.Windows.Forms.Label lblAutoAmp;
+        private System.Windows.Forms.Button btnAddAutoAmpMiss;
+        private System.Windows.Forms.Button btnAddAutoAmpScore;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnDeleteTeleAmpMiss;
+        private System.Windows.Forms.Button btnDeleteTeleAmpScore;
+        private System.Windows.Forms.Label lblTeleAmp;
+        private System.Windows.Forms.Button btnAddTeleAmpMiss;
+        private System.Windows.Forms.Button btnAddTeleAmpScore;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnDeleteTeleSpeakerMiss;
+        private System.Windows.Forms.Button btnDeleteTeleUnampSpeaker;
+        private System.Windows.Forms.Button btnDeleteTeleAmpSpeaker;
+        private System.Windows.Forms.Label lblTeleSpeaker;
+        private System.Windows.Forms.Button btnAddTeleUnampSpeaker;
+        private System.Windows.Forms.Button btnAddTeleSpeakerMiss;
+        private System.Windows.Forms.Button btnAddTeleAmpSpeaker;
+        private System.Windows.Forms.OpenFileDialog ofdOpen;
+        private System.Windows.Forms.SaveFileDialog sfdSave;
     }
 }
 
